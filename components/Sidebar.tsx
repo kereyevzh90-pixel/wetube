@@ -56,7 +56,7 @@ export default function Sidebar({ open }: { open: boolean }) {
 
   return (
     <aside
-      className={`fixed left-0 top-14 h-[calc(100vh-56px)] bg-[#0f0f0f] z-40 overflow-hidden transition-[width] duration-200 ${
+      className={`fixed left-0 top-14 h-[calc(100vh-56px)] bg-[#0f0f0f] z-50 overflow-hidden transition-[width] duration-200 ${
         open ? "w-60" : "w-0"
       }`}
     >

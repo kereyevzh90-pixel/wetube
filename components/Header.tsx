@@ -20,7 +20,7 @@ export default function Header({ onMenuClick }: { onMenuClick?: () => void }) {
   return (
     <header className="sticky top-0 z-50 bg-[#0f0f0f] flex items-center justify-between px-4 pl-6 h-14">
       {/* Left: Logo + hamburger */}
-      <div className="flex items-center gap-4 shrink-0 w-[240px]">
+      <div className="flex items-center gap-4 shrink-0 w-[240px] ml-4">
         <button onClick={onMenuClick} className="p-2 rounded-full hover:bg-[#272727] transition">
           <svg className="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 24 24">
             <path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"/>
