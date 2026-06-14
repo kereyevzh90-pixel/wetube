@@ -60,14 +60,14 @@ export default function Sidebar({ open }: { open: boolean }) {
         open ? "w-60" : "w-0"
       }`}
     >
-      <div className="flex flex-col pt-4 pb-4 px-2 gap-1 w-60">
+      <div className="flex flex-col pt-4 pb-4 px-3 gap-1 w-60">
         {items.map(({ href, label, icon }) => {
           const active = pathname === href;
           return (
             <Link
               key={label}
               href={href}
-              className={`flex items-center gap-5 px-4 py-3.5 rounded-xl transition whitespace-nowrap ${
+              className={`flex items-center gap-5 px-5 py-3.5 rounded-xl transition whitespace-nowrap ${
                 active
                   ? "bg-[#272727] text-white"
                   : "text-[#aaa] hover:bg-[#1a1a1a] hover:text-white"

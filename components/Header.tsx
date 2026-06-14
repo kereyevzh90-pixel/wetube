@@ -18,7 +18,7 @@ export default function Header({ onMenuClick }: { onMenuClick?: () => void }) {
   }
 
   return (
-    <header className="sticky top-0 z-50 bg-[#0f0f0f] flex items-center justify-between px-6 h-14">
+    <header className="sticky top-0 z-50 bg-[#0f0f0f] flex items-center justify-between px-4 pl-6 h-14">
       {/* Left: Logo + hamburger */}
       <div className="flex items-center gap-4 shrink-0 w-[240px]">
         <button onClick={onMenuClick} className="p-2 rounded-full hover:bg-[#272727] transition">

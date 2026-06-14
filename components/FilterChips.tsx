@@ -11,7 +11,7 @@ interface FilterChipsProps {
 export default function FilterChips({ categories, active, search }: FilterChipsProps) {
   return (
     <div className="sticky top-14 z-40 bg-[#0f0f0f] border-b border-[#272727]">
-      <div className="flex gap-3 px-6 py-3 overflow-x-auto scrollbar-none [&::-webkit-scrollbar]:hidden">
+      <div className="flex gap-4 pl-10 pr-6 py-3 overflow-x-auto scrollbar-none [&::-webkit-scrollbar]:hidden">
         {categories.map(cat => {
           const isActive = active === cat;
           const href = cat === "Все" ? (search ? `/?q=${encodeURIComponent(search)}` : "/") : `/?cat=${encodeURIComponent(cat)}${search ? `&q=${encodeURIComponent(search)}` : ""}`;
