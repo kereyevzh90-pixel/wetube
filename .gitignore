@@ -36,6 +36,15 @@ yarn-error.log*
 # vercel
 .vercel
 
+# uploaded videos (local dev only)
+/public/uploads/
+
+# local sqlite db
+prisma/*.db
+prisma/*.db-journal
+
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+/app/generated/prisma
