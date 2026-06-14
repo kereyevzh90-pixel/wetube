@@ -57,7 +57,7 @@ export default function Header({ onMenuClick }: { onMenuClick?: () => void }) {
       <div className="flex items-center gap-1 shrink-0 w-[240px] justify-end">
         {status !== "loading" && !session && (
           <button
-            onClick={() => signIn("google")}
+            onClick={() => signIn("google", { callbackUrl: "/setup" })}
             className="flex items-center gap-2 border border-[#3d5a99] text-[#3d98ff] hover:bg-[#263850] text-sm px-4 py-2 rounded-full transition"
           >
             <svg className="w-5 h-5" viewBox="0 0 24 24" fill="currentColor">
