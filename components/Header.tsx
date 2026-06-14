@@ -6,7 +6,7 @@ import { useSession, signIn, signOut } from "next-auth/react";
 import { useState } from "react";
 import { useRouter } from "next/navigation";
 
-export default function Header() {
+export default function Header({ onMenuClick }: { onMenuClick?: () => void }) {
   const { data: session, status } = useSession();
   const [menuOpen, setMenuOpen] = useState(false);
   const [search, setSearch] = useState("");
@@ -18,10 +18,10 @@ export default function Header() {
   }
 
   return (
-    <header className="sticky top-0 z-50 bg-[#0f0f0f] flex items-center justify-between px-4 h-14">
+    <header className="sticky top-0 z-50 bg-[#0f0f0f] flex items-center justify-between px-6 h-14">
       {/* Left: Logo + hamburger */}
       <div className="flex items-center gap-4 shrink-0 w-[240px]">
-        <button className="p-2 rounded-full hover:bg-[#272727] transition">
+        <button onClick={onMenuClick} className="p-2 rounded-full hover:bg-[#272727] transition">
           <svg className="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 24 24">
             <path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"/>
           </svg>
